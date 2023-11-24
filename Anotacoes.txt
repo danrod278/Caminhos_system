@@ -1,0 +1,11 @@
+criar banco de dados - use nome_do_banco (temporariamente )
+mostrar banco de dados - show dbs
+criar coleção/adicionar - db.nomecolecao.insertOne({nome:"Daniel", idade:16, proficao:"Estudante", empregado:false})
+mostrar coleção - show colletcions
+inserir varios dados- db.nomecolecao.insertMany([{nome:"Marlene", idade:52, proficao:"Professora", empregado:true},{nome:"Roberto", idade:54, proficao:"Caminhoneiro", empregado:false}])
+ver dados em uma coleçao - db.nomecolecao.find().pretty()
+ver dados precisos - db.nomecolecao.find({empregado:true}).pretty()
+quantidade de dados - db.nomecolecao.find(...).count()
+atualizar um dado - db.nomecolecao.updateOne({alguma coisa sobre o dado},{$set:{o que quer modificar (não necessariamente o que foi informado)})
+atualizar varios dados - db.nomecolecao.updateMany({pra quem é a atualização}, {$set:{o que será atualizado}})
+remover dado - db.nomecolecao.deleteOne(alguma informação)

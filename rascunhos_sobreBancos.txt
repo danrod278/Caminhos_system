@@ -1,0 +1,6 @@
+dados gerais - id, nome, nome dos pais, numero de um responsavel, endereço, cpf dos pais, série/turma, data de nascimento
+materias de cada serie - portugues, matematica, ingles...
+turmas - 1ª, 2ª...
+boletins trimestrais - {1ªtri{dd3r3fg44d(id):{port:10, mat, 8}, cik39slkk99k(id);{port:7, mat9}...}, 2ª{},3ª{}}
+professores de cada turma - {vfdojv93jkjk(id):[1ª, 5ª, 8ª..]}
+usuarios - {nome:Joao, idade:55, telefone:11923456789, id:dvvsdvdefs, ordem:0}

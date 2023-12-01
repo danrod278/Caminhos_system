@@ -27,9 +27,13 @@ app.post('/conferir', (req, res)=>{
         }
     }
     acesso()
+    
      
 })
 app.get('/inicial/:id',(req, res)=>{
+    const userId = req.params.id.startsWith(":") ? req.params.id.slice(1) : req.params.id
+    console.log(userId)
+    //funcoes.verificar_id(req.params.id)
     res.send('ok')
 })
 

@@ -1,75 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
-
-body{
-    background-color: rgb(0, 0, 0);
+#central{
+  
+   height: auto;
+   margin:0 auto;
+   background-color: aqua;
+   display: inline;
 }
-
-.psobre{
-    font-size: 20px;
-    font-family: 'Patua One', serif;
-    color: rgb(230, 230, 65);
-    letter-spacing: 0.1rem;
-    line-height: 1.8rem;
-    text-align: justify;
-}
-
-h1{
-    color: rgba(90, 41, 119, 0.904);
-    font-size: 35px;
-    font-family: 'Patua One', serif;
-    margin-left: 10px;
-}
-
-h2{
-    color: rgba(226, 241, 88, 0.904);
-    font-size: 32px;
-    font-family: 'Patua One', serif;
-    letter-spacing: 0.1rem;
-}
-
-h3{
-    color: rgba(90, 41, 119, 0.904);
-    font-size: 35px;
-    font-family: 'Patua One', serif;
-}
-
-label{
-    color: rgb(0, 119, 255);
-    font-size: 23px;
-    font-family: 'Patua One', serif;
-}
-
-.header {
-    width: 100%;
-}
-.menu {
-    background-color: rgb(63, 61, 61);
-    text-align: center;
-}
-.menu ul li {
-    display: inline-block;
-}
-.menu ul li a {
+.blocos{
     display: block;
-    color: #FFFFFF;
-    padding: 30px 20px;
-    font-family: 'Patua One', serif;
+}
+#dados{
+    width:50%;
+    height: auto;
+    
+
+}
+label{
     font-size: 25px;
-    text-decoration: none;
 }
-
-.phome{
-    font-size: 50px;
-    font-family: 'Patua One', serif;
-    color: yellow;
+h1{
+    font-size: 43px;
 }
-
-.input{
-    background-color: black;
-    border-color: aqua;
-    color: aliceblue;
-    font-size: 21px;
-    border-radius: 10px;
-    font-family: 'Patua One', serif;
-}
-

@@ -1,10 +1,9 @@
 const express = require("express")
 const app = express()
-const path = require("path")
-const body_parser = require("body-parser"); 
+const path = require("path") 
 const bodyParser = require("body-parser");
 const funcoes = require('./funcoes.js');
-const { stringify } = require("querystring");
+
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -17,6 +16,7 @@ app.get('/', (req, res)=>{
 app.post('/conferir', (req, res)=>{
 
     let dados_form=req.body
+    console.log(dados_form)
     async function acesso(){
         const acess = await funcoes.verificador_login("nomecolecao", dados_form)
         console.log(acess)
@@ -33,7 +33,8 @@ app.post('/conferir', (req, res)=>{
 app.get('/inicial/:id',(req, res)=>{
     const userId = req.params.id.startsWith(":") ? req.params.id.slice(1) : req.params.id
     console.log(userId)
-    //funcoes.verificar_id(req.params.id)
+    const acesso = funcoes.verificar_id(userId)
+    console.log(acesso)
     res.send('ok')
 })
 

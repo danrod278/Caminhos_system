@@ -34,15 +34,17 @@ async function verificar_id(id){
         await client.connect()
         const db = client.db()
         const dados = await (db.collection('nomecolecao').find().toArray())
-
+        
         if(dados.length>0){
             for(let contador=0;contador<=dados.length;contador++){
                 if(contador==dados.length){
+                    
                     return false
                 }
                 let analista = `${dados[contador]._id}`
-                if(analista._id===id){
-                    console.log('ok')
+               
+                if(analista==id){
+                    return true
                        
                 }
                 

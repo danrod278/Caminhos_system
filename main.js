@@ -3,16 +3,30 @@ const app = express()
 const path = require("path") 
 const bodyParser = require("body-parser");
 const funcoes = require('./funcoes.js');
+const rateLimit = require('express-rate-limit')
+
+
+const limite = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 10
+})
+
 
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static((path.join(__dirname,'public'))))
 app.use(bodyParser.urlencoded({extended:true}))
+//app.use(limite)
+
+
 
 app.get('/', (req, res)=>{
     res.render("login")
 })
+
+
+
 app.post('/conferir', (req, res)=>{
 
     let dados_form=req.body
@@ -21,7 +35,7 @@ app.post('/conferir', (req, res)=>{
         const acess = await funcoes.verificador_login("nomecolecao", dados_form)
         console.log(acess)
         if(acess[0]){
-            res.redirect(`/inicial/:${acess[1]}`)
+            res.redirect(`/inicial/${acess[1]}`)
         }else{
             res.redirect('/')
         }
@@ -30,12 +44,22 @@ app.post('/conferir', (req, res)=>{
     
      
 })
+
+
+
 app.get('/inicial/:id',(req, res)=>{
-    const userId = req.params.id.startsWith(":") ? req.params.id.slice(1) : req.params.id
-    console.log(userId)
-    const acesso = funcoes.verificar_id(userId)
-    console.log(acesso)
-    res.send('ok')
+    const userId = req.params.id
+    async function renderOrNot(){
+        const acesso = await  funcoes.verificar_id(userId)
+        if(acesso){
+            console.log("Acesso liberado")
+            res.send("ok")
+        }else{
+           
+            res.redirect("/")
+        }
+    }
+    renderOrNot()
 })
 
 

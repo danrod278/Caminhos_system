@@ -1,0 +1,34 @@
+	Bom dia a todos os professores. Desde já gostaria de agradecer pelo priviégio de estar aqui.
+	Primeiramente gostaria de mostrar o que eu vim apresentar aos senhores. Meu proposito aqui
+é negociar a implementação de um sistema de gerenciamento escola no colégio. Mas eu gostaria deixar essa parte para o final.
+	Bom, eu nos ultimos meses tenho observado alguns problemas nos resultados dos ultimos boletins.
+Percebi que alguns colegas não tiveram suas recuperações lançadas. Devido a isso perguntei ao professor
+Sérgio como funcionava esse sistema, e ele me disse que era por meio de planilhas como excel e google planilhas. 
+Um pouco depois uma conhecida do Colinas me contou o incidente que houve na sala dela, quando um professor tentou alicar uma
+prova, porem acabou impimindo equivocadamente outra prova. Isso então foi um despertar de como eu poderia
+melhorar essa situação.
+	Depois de muito tempo pensando como eu faria pra resolver isso, resolvi fazer um processo seletivo para encontrar
+um parceiro de desenvolvimento. Por muita sorte o unico participante que restou era muito experiente. e isso me deixou muito feliz 
+porque todos desistiram antes mesmo do começo. entao por um bom tempo nós ficamos estudando meios de como criar esse sistema.
+Até que chegamos em um concensso de como tudo deviria ser no início. Chegamos em uma conclusão de que esse sistema deveria ser totalmente centralizado
+ou seja, abranger todas as atividades do colegio em um só lugar.
+	E foi o que fizemos. ciramos uma aplicação web que abraça todos os aspectos do colegio. desde lançamento de notas até a impressão do boletim.
+mas deveria centralizar tudo em um só lugar, então adicionamos opçoes do aluno ver suas notas, criamosbancos de dados para armazenar informaçoes 
+de preceptorias antigas para um novo preceptor poder conhecer melhor o preceptorado. adicionamos uma opção para o professor lançar 
+uma prova no sistema e não correr o risco de imprimir dezenas de provas erradas. e o melhor de tudo, tudo está online. ou seja, de onde voce estiver voce poderá ter acesso a esse sistemas
+e do aparelho que voce quiser.
+	para usalo basta ter uma conta criada pelo administrador. a vantagem disso é que um professor de matematica do sexto ano não pode mudar as notas de geografia de um aluno do setimo.
+ao não ser que ele tenha a permissão do administrador.
+	conseguimos criptografar tudo, impedindo rastreamento ou a possibilidade de um intruso ler informaçoes sigilosas. nosso banco de dados esta completamente trancado com o uso permitido apenas por aqueles 
+que possuem a palavra passe. alem de ser um sistema muito discreto. tudo isso para evitar ataques de pessoas más intencionadas
+	agora gostaria de convidalos a usar esse sistema. Esse é o link: 
+os usuarios de voces ja estao criados e todos como administrador
+
+vejam que como adms voces tem varias opções, como criar um aluno, criar um professor, criar uma sala, ver anotações sobre determinado
+aluno, e se forem usar essas ferramentas terão ainda mais opçoes
+
+para fechar essa apresentação quero convencelos do por que deveriam fechar negocio conosco.
+	desdo inicio eu ja estava ciente de que o colegio ja estava testando um sistema como esse. não tenho muitas informaçoes
+sobre esse sistema nem o que ele faz. mesmo assim achei que valeria apena arriscar. e com muito esforço consegui junto a um socio fazer tudo isso
+então acho que seriamos capazes de ter uma parceria com voces. e tambem acho que seria muito bom para a escola poder dizer que nasceu dela uma empresa
+que futuramente faremos ser gigante. poder dizer que alunos seus fizeram grandes obras. Obrigado pela atenção de todos. 

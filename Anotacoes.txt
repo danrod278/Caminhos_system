@@ -9,3 +9,18 @@ quantidade de dados - db.nomecolecao.find(...).count()
 atualizar um dado - db.nomecolecao.updateOne({alguma coisa sobre o dado},{$set:{o que quer modificar (não necessariamente o que foi informado)})
 atualizar varios dados - db.nomecolecao.updateMany({pra quem é a atualização}, {$set:{o que será atualizado}})
 remover dado - db.nomecolecao.deleteOne(alguma informação)
+
+
+
+Quais documentos para a matrícula escolar?
+	Foto 3x4 do aluno;
+
+	Carteira de vacinação do aluno;
+
+	Comprovante de residência;
+
+	Certidão de nascimento;
+
+	Cópia do RG do aluno e dos responsáveis.
+	
+	Aos que já Estudaram em outras escolas é necessario Histórico 

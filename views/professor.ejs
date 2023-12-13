@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/professor.css" />
+    <title>Sitema dos professores</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="professor.html">
+            <img src="assets/logo.svg" alt="logo" />
+          </a>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#my-datas">Meus dados</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="">Sair</a></li>
+          </ul>
+        </nav>
+
+        <div class="burguer">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="container">
+        <img
+          src="assets/teachers-ilustration.svg"
+          alt=" teachers-ilustration"
+        />
+
+        <div class="text">
+          <p><span>Bom dia</span>, professor(a)</p>
+          <h2>Gildete Iramar Vasconcelos</h2>
+          <p>Id de professor: <span>40028922b</span></p>
+          <button>Ver Classes</button>
+        </div>
+      </div>
+    </div>
+    <img src="assets/waves.svg" alt="waves" class="waves" />
+
+    <main id="my-datas">
+      <div class="my-datas">
+        <section class="data">
+          <h3>Meus dados</h3>
+
+          <ul>
+            <li>
+              <p>Nome:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Data de Nascimento:</p>
+              <input type="date" readonly />
+            </li>
+            <li>
+              <p>Endereço Residencial:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Número de Telefone:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>Endereço de E-mail:</p>
+              <input type="email" readonly />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Documentos Pessoais</h3>
+
+          <ul>
+            <li>
+              <p>RG:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>CPF:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>Cópia do diploma de graduação:</p>
+              <input type="file" disabled />
+            </li>
+            <li>
+              <p>Comprovante de Residencial:</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Experiência profissional</h3>
+
+          <ul>
+            <li>
+              <p>Histórico de empregos anteriores:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Currículo:</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Educação</h3>
+
+          <ul>
+            <li>
+              <p>Histórico acadêmico:</p>
+              <input type="file" disabled />
+            </li>
+            <li>
+              <p>Certificados de cursos adicionais ou treinamentos:</p>
+              <input type="file" disabled />
+            </li>
+            <li>
+              <p>Nível de formação (licenciatura, mestrado, etc.):</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Certificações e licenças</h3>
+
+          <ul>
+            <li>
+              <p>Número da licença para lecionar:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>Certificações específicas para a área de ensino:</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Informações bancárias</h3>
+
+          <ul>
+            <li>
+              <p>Dados para depósito direto de salário:</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Informações de emergência</h3>
+
+          <ul>
+            <li>
+              <p>Contato de emergência:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>Informações médicas relevantes:</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+
+        <section class="data">
+          <h3>Políticas e regulamentos</h3>
+
+          <ul>
+            <li>
+              <p>
+                Assinatura para confirmar a ciência e a conformidade com
+                políticas da escola:
+              </p>
+              <input type="file" disabled />
+            </li>
+            <li>
+              <p>Aceitação das responsabilidades do cargo:</p>
+              <input type="file" disabled />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <div class="burguer-overlay">
+      <ul>
+        <li><a href="">Meus dados</a></li>
+        <li><a href="">Sobre</a></li>
+        <li><a href="">Contato</a></li>
+        <li><a href="">Sair</a></li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

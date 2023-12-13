@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administração</title>
+    <link rel="stylesheet" href="/styles/admin.css" />
+  </head>
+  <body>
+    <ul>
+      <li class="newStudent">Criar aluno</li>
+      <li name="Nusuario" onclick="criarUsuario()">Criar Usuário</li>
+    </ul>
+
+    <div class="modal-overlay">
+      <div class="container">
+        <form action="/verifica_teste" method="post" name="formulario">
+          <h2>Criar aluno</h2>
+
+          <div class="close">
+            <img src="/assets/close.svg" alt="close-button" />
+          </div>
+
+          <hr />
+
+          <section>
+            <h3>Dados do aluno</h3>
+
+            <div>
+              <label for="nome">
+                Nome: <input type="text" name="nome" id="nome" required />
+              </label>
+
+              <label for="nome_responsavel">
+                Nome do Responsavel:
+                <input
+                  type="text"
+                  name="nome_responsavel"
+                  id="nome_responsavel"
+                  required
+                />
+              </label>
+
+              <label for="sexo"
+                >Sexo:
+                <select name="sexo" id="sexo" required>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
+              </label>
+
+              <label for="cpf">
+                CPF:
+                <input type="text" name="cpf" id="cpf" required />
+              </label>
+
+              <label for="rg"
+                >Número do RG:
+                <input type="text" name="rg" id="rg" required />
+              </label>
+
+              <label for="cidade_origem">
+                Cídade de nascimento:
+                <input
+                  type="text"
+                  name="cidade_origem"
+                  id="cidade_origem"
+                  required
+                />
+              </label>
+
+              <label for="nascimento">
+                Data de nascimento:
+                <input type="text" name="date" id="nascimento" required />
+              </label>
+            </div>
+          </section>
+          <hr />
+          <section>
+            <h3>Endereço</h3>
+            <div>
+              <label for="rua">
+                Logradouro - Nº
+                <div>
+                  <input type="text" name="rua" id="rua" required />
+                  <p>-</p>
+                  <input type="number" name="numero" required min="1" size="1" />
+                </div>
+              </label>
+
+              <label for="bairro">
+                Bairro:
+                <input type="text" name="bairro" id="bairro" required />
+              </label>
+
+              <label for="cep">
+                CEP: <input type="text" name="cep" id="cep" required />
+              </label>
+            </div>
+          </section>
+          <hr />
+          <section>
+            <h3>Dados do responsavel</h3>
+            <div>
+              <label for="tel">
+                Telefone responsavel:
+                <input
+                  type="text"
+                  name="telefone_responsavel1"
+                  id="tel"
+                  required
+                />
+              </label>
+
+              <label for="tel2">
+                Telefone responsavel 2 (opcional):
+                <input type="text" name="telefone_responsavel2" id="tel2" />
+              </label>
+
+              <label for="responsavel">
+                CPF do responsavel:
+                <input
+                  type="text"
+                  name="cpf_responsavel"
+                  id="responsavel"
+                  required
+                />
+              </label>
+            </div>
+          </section>
+
+          <hr />
+
+          <div class="btn">
+            <button onclick="cadastro()">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/scripts/modalOverlay.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+      const cpf = document.querySelector("#cpf")
+      const responsavel = document.querySelector("#responsavel")
+      const rg = document.querySelector("#rg")
+      const nascimento = document.querySelector("#nascimento")
+      const cep = document.querySelector("#cep")
+      const tel = document.querySelector("#tel")
+      const tel2 = document.querySelector("#tel2")
+
+      IMask(cpf, { mask: "000.000.000-00" })
+      IMask(rg, { mask: "000.000.000-00" })
+      IMask(nascimento, { mask: "00/00/0000" })
+      IMask(cep, { mask: "0000-0000" })
+      IMask(tel, { mask: "+55 (00) 0000-00000" })
+      IMask(tel2, { mask: "+55 (00) 0000-00000" })
+      IMask(responsavel, { mask: "000.000.000-00" })
+    </script>
+  </body>
+</html>

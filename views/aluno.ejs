@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/aluno.css" />
+    <title>Sistema dos Alunos</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="assets/logo.svg" alt="logo" />
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#info">Meus dados</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="">Sair</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="container">
+        <div class="text">
+          <p>Olá,</p>
+          <h2>Nome do Aluno (Colocar pelo banco de dados)</h2>
+          <p>ID do Aluno(a): <span class="students-id">40028922</span></p>
+          <button><span>Ver notas</span></button>
+        </div>
+        <div class="illustration">
+          <img src="assets/hero-illustration.svg" alt="illustration" />
+        </div>
+      </div>
+      <div class="hero-detail"></div>
+    </div>
+
+    <main id="info">
+      <div class="my-datas">
+        <section class="data">
+          <h3>Meus dados</h3>
+
+          <ul>
+            <li>
+              <p>Nome:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Nome do Pai:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Nome da Mãe:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Sexo:</p>
+              <select id="sex">
+                <option>Masculino</option>
+                <option>Feminino</option>
+              </select>
+            </li>
+            <li>
+              <p>CPF:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>RG:</p>
+              <input type="number" readonly />
+            </li>
+            <li>
+              <p>Cidade de Nascimento:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>País de Nascimento:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Data de Nascimento:</p>
+              <input type="number" readonly />
+            </li>
+          </ul>
+        </section>
+        <section class="address">
+          <h3>Endereço</h3>
+
+          <ul>
+            <li>
+              <p>Endereço - N°:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Complemento:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Bairro:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>CEP:</p>
+              <input type="number" readonly />
+            </li>
+          </ul>
+        </section>
+        <section class="responsible-list">
+          <h3>Lista de Responsáveis</h3>
+
+          <ul>
+            <li>
+              <p>Responsável 1:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Responsável 2:</p>
+              <input type="text" readonly />
+            </li>
+            <li>
+              <p>Responsável 3:</p>
+              <input type="text" readonly />
+            </li>
+          </ul>
+        </section>
+      </div>
+      <button>Imprimir</button>
+    </main>
+  </body>
+</html>

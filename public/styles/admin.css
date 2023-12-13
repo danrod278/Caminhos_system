@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+:root {
+  --alegreya: "Alegreya Sans SC", sans-serif;
+  --opensans: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #fff;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+li {
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.modal-overlay {
+  display: none;
+}
+
+.modal-overlay.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  background: #00000069;
+}
+
+.modal-overlay.active .container {
+  background-color: #fff;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  max-width: 113rem;
+  height: 59rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal-overlay.active .container::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+.modal-overlay.active .container::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 1rem;
+}
+
+.modal-overlay.active .container::-webkit-scrollbar-thumb {
+  background-color: rgb(206, 206, 206);
+  border-radius: 2rem;
+  border: 0.3rem solid white;
+}
+
+.modal-overlay.active .container form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6rem;
+}
+
+.modal-overlay.active .container form h2 {
+  font-family: var(--alegreya);
+  color: #313131;
+  font-size: 3rem;
+}
+
+.modal-overlay.active .container form section {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.modal-overlay.active .container form section h3 {
+  color: #313131;
+}
+
+.modal-overlay.active .container form section > div {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 2rem;
+}
+
+.modal-overlay.active .container form section label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-overlay.active .container form section label select {
+  background: #eaeaea;
+  border: none;
+  height: 40px;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  font-family: var(--opensans);
+  font-size: 1.6rem;
+  outline: 0;
+}
+
+.modal-overlay.active .container form section label div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.modal-overlay.active .container form section label input {
+  font-family: var(--opensans);
+  font-size: 1.6rem;
+  color: #313131;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+}
+
+.modal-overlay.active
+  .container
+  form
+  section:nth-child(6)
+  div
+  label:nth-child(1)
+  div
+  input:nth-child(1) {
+  width: 70%;
+}
+
+.modal-overlay.active
+  .container
+  form
+  section:nth-child(6)
+  div
+  label:nth-child(1)
+  div
+  input:nth-child(3) {
+  width: 30%;
+}
+
+.modal-overlay.active .container form .btn {
+  display: block;
+  text-align: right;
+}
+
+.modal-overlay.active .container form button {
+  width: fit-content;
+  padding: 1rem 2rem;
+  background: #4290c5;
+  border: none;
+  border-radius: 0.3rem;
+  color: #fff;
+  font-size: 1.8rem;
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+
+hr {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #b4b4b4;
+  margin: 3rem 0;
+}
+
+.close {
+  position: fixed;
+  top: 2.1rem;
+  right: 5rem;
+  font-size: 3rem;
+  background: #fff;
+  padding: 0.3rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .modal-overlay.active .container form section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .modal-overlay.active .container form section {
+    flex-direction: column;
+  }
+
+  .modal-overlay.active .container form section > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .modal-overlay.active .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-overlay.active .container form {
+    padding: 3rem 2rem;
+  }
+
+  .close {
+    right: 1.1rem;
+  }
+}

@@ -1,13 +1,13 @@
 const express = require("express")
+require("dotenv/config")
 const app = express()
 const path = require("path") 
 const bodyParser = require("body-parser");
-const funcoes = require('./controller.js');
+const authentication = require('./repositorys/authentication');
+const creator = require("./repositorys/creator")
 const rateLimit = require('express-rate-limit');
 const { render } = require("ejs");
 const sessions = require("express-session")
-const https = require('https')
-const fs = require("fs")
 
 const limite = rateLimit({
     windowMs: 15 * 60 * 1000,
@@ -16,7 +16,7 @@ const limite = rateLimit({
 
 app.use(
     sessions({
-        secret:"$$$albert15promax$$$",
+        secret:process.env.SECRET,
         resave:true,
         saveUninitialized:true
 }))
@@ -55,8 +55,9 @@ app.get('/login', (req, res)=>{
 
 app.post('/login',(req, res)=>{
     const {username, password} = req.body
+    
     async function acesso(){    
-        const acesso= await funcoes.testa_acesso(username, password)
+        const acesso= await authentication.testa_acesso(username, password)
         if(acesso[0]==true){
             req.session.user={
                 id:acesso[1],
@@ -77,10 +78,11 @@ app.get('/teste', verificaAutenticacao, (req, res)=>{
 })
 app.post("/verifica_teste", verificaAutenticacao, (req, res)=>{
     res.send(req.body)
-    funcoes.add_aluno(req.body)
+    creator.add_aluno(req.body)
 })
 
-const port = 202
-app.listen(port, "192.168.15.11", ()=>{
-    console.log(`Funcionando; Porta: https://192.168.15.11:${port}`)
+const port = 2000
+const ip="192.168.4.78"
+app.listen(port, `${ip}`, ()=>{
+    console.log(`Funcionando; Porta: https://${ip}:${port}`)
 })
